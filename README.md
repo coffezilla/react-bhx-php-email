@@ -4,6 +4,9 @@ This is a very basic example of sending PHP emails (PHPMailer) using React and a
 
 It's pretty much a simple form with name, email and message field to send email to some website admin as "Contact Form".
 
+## Dependencies
+- Axios
+
 ## Feat
 
 - PHP Mailer ( Backend sample included )
