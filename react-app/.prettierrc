@@ -1,0 +1,8 @@
+{
+	"tabWidth": 2,
+	"useTabs": true,
+	"singleQuote": true,
+	"comma-dangle": [2, "always-multiline"],
+	"trailingComma": "all",
+	"printWidth": 100
+}
