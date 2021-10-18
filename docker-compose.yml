@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+
+  # backend: apache
+  backend:
+    build:
+      context: ./backend
+    container_name: webpack_php-${CONTAINER_PREFIX}
+    restart: always
+    volumes:
+      - "./backend:/var/www/backend"
+      - "./apache2.conf:/etc/apache2/apache2.conf"
+    ports:
+      - ${APP_PORT}:80
+    working_dir: /var/www/backend
+  
+  # frontend: react
+  app:
+    build:
+      context: .
+    container_name: react_front-${CONTAINER_PREFIX}
+    restart: always
+    volumes:
+      - "./react-app/public:/app/public"
+      - "./react-app/src:/app/src"
+    command: npm start
+    
+    ports:
+      - 3000:3000
+
+    environment:
+      - NODE_ENV=development
+
+volumes:
+  db_data:
+    name: webpack_vol-${CONTAINER_PREFIX}

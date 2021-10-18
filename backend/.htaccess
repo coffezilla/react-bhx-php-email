@@ -1,0 +1,10 @@
+
+<IfModule mod_rewrite.c>
+   
+    RewriteEngine On
+    SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
+
+    # localhost
+    RewriteRule ^send-email/?$ /email/send_email_default.php [NC,L]
+
+</IfModule>

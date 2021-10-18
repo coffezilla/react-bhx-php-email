@@ -17,11 +17,11 @@ $userMessage = addslashes(trim($_POST['message']));
 
 // sender
 $senderName = "React E-mail Sender";
-$senderEmail = "...";
+$senderEmail = "PUT_SENDER_EMAIL_HERE";
 
 // receiver
 $receiverName = "React E-mail Sender";
-$receiverEmail = "...";
+$receiverEmail = "PUT_RECEIVER_EMAIL_HERE";
 
 // ENVIO DE EMAIL
 require_once("phpmailer/PHPMailerAutoload.php");	    

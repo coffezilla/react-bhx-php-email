@@ -22,7 +22,7 @@ function App() {
 		formData.append('message', formInput.message);
 
 		axios({
-			url: 'http://react-bhx-php-email/email/send_email_default.php',
+			url: 'http://backend/send-email',
 			method: 'post',
 			data: formData,
 		})
